@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "source": ".output/server", "runtime": "nodejs16"
+  },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
@@ -13,7 +16,7 @@
       "**/node_modules/**"
     ]
   },
-  "storage": {
-    "rules": "storage.rules"
+  "ui": {
+    "enabled": false
   }
 }
