@@ -18,6 +18,6 @@ jobs:
       # - run: ls -la
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting,functions --debug
+          args: deploy --only hosting,functions
         env:
           GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPEEDY_VALOR_379408 }}
