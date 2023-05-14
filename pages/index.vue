@@ -44,7 +44,7 @@ const filteredBrawlers = computed(() => {
       Brawlers
     </h1>
     <h2 class="text-lg mb-8 font-normal text-gray-600 dark:text-gray-400">
-      Yep, all brawlers from Brawl Stars
+      Yep, all brawlers from Brawl Stars!
     </h2>
   </div>
 
