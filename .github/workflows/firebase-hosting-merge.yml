@@ -4,7 +4,7 @@ on:
     branches:
       - main
 
-      
+
 jobs:
   build:
     name: Build
@@ -19,7 +19,7 @@ jobs:
       - run: ls -la
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy
         env:
           GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPEEDY_VALOR_379408 }}
   #     - name: Archive Production Artifact

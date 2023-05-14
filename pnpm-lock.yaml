@@ -66,6 +66,9 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.11.0
     version: 9.11.0(eslint@8.39.0)
+  nuxi:
+    specifier: ^3.4.3
+    version: 3.4.3
   nuxt:
     specifier: ^3.4.3
     version: 3.4.3(@types/node@18.0.0)(eslint@8.39.0)(typescript@5.0.4)
@@ -7679,6 +7682,21 @@ packages:
     dependencies:
       vue: 3.2.47
 
+  /vue-demi@0.14.1(vue@3.2.47):
+    resolution: {integrity: sha512-rt+yuCtXvscYot9SQQj3WKZJVSriPNqVkpVBNEHPzSgBv7QIYzsS410VqVgvx8f9AAPgjg+XPKvmV3vOqqkJQQ==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.47
+    dev: false
+
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
@@ -7733,7 +7751,7 @@ packages:
     dependencies:
       firebase: 9.21.0
       vue: 3.2.47
-      vue-demi: 0.14.0(vue@3.2.47)
+      vue-demi: 0.14.1(vue@3.2.47)
     dev: false
 
   /wcwidth@1.0.1:
