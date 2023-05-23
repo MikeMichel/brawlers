@@ -1,3 +1,5 @@
+components, composables, modules und co. [Verzeichnisstruktur](https://vueschool.io/articles/vuejs-tutorials/understanding-the-directory-structure-in-nuxt-3/)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
