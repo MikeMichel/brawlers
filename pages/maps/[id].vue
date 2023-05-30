@@ -66,7 +66,7 @@ useHead({
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                <img src="" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
