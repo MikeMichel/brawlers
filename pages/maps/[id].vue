@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { Maps } from '~~/types'
+import { fetchBrawlers } from '~/api/brawlers'
 
 const route = useRoute()
 console.log(route.params)
 const { data: map, pending, error } = await useFetch<Maps>(`https://api.brawlapi.com/v1/maps/${route.params.id}`)
-
+const brawlers = await fetchBrawlers()
 useHead({
 	title: `${map.value?.title} | Maps`,
 })
@@ -48,14 +49,9 @@ useHead({
     <!-- head -->
     <thead>
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Brawler</th>
+        <th>Rarity/Class</th>
+        <th>Win Rate</th>
         <th></th>
       </tr>
     </thead>
@@ -66,22 +62,20 @@ useHead({
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="mask mask-squircle w-12 h-12">
-                <img src="" alt="Avatar Tailwind CSS Component" />
+                <img :src="brawlers.list.find(d => d.id===best.brawler).imageUrl" .alt="brawlers.list.find(d => d.id===best.brawler).name" />
               </div>
             </div>
             <div>
-              <div class="font-bold">{{ best.brawler }}</div>
-              <!-- <div class="text-sm opacity-50">{{ brawlers.id[0].name }}</div> -->
-
+			  {{ brawlers.list.find(d => d.id===best.brawler).name  }}
             </div>
           </div>
         </td>
         <td>
-          Zemlak, Daniel and Leannon
-          <br/>
-          <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          <span class="badge badge-sm badge-secondary">{{ brawlers.list.find(d => d.id===best.brawler).rarity.name  }}</span>
+		  <br>
+          <span class="badge badge-sm badge-primary">{{ brawlers.list.find(d => d.id===best.brawler).class.name  }}</span>
         </td>
-        <td>Purple</td>
+        <td><progress class="progress progress-info w-56" :value="best.winRate" max="100"></progress> {{ best.winRate }}%</td>
         <th>
           <button class="btn btn-ghost btn-xs">details</button>
         </th>
