@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { Maps } from '~~/types'
-import { provideContext } from 'nuxt'
-import { brawlers } from '~/pages/index.vue'
-
-provideContext('brawlers', brawlers)
 
 const route = useRoute()
 console.log(route.params)
