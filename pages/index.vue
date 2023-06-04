@@ -102,8 +102,8 @@ const filteredBrawlers = computed(() => {
     <figure><img :src="brawler.imageUrl" .alt="brawler.name" /></figure>
     <div class="card-body">
       <h2 class="card-title">{{ brawler.name }}      </h2>
-      <h4 class="badge md:badge-md badge-secondary">{{brawler.rarity.name}}</h4>
-      <h4 class="badge badge-primary">{{brawler.class.name}}</h4>
+      <h4 class="badge md:badge-sm badge-secondary">{{brawler.rarity.name}}</h4>
+      <h4 class="badge md:badge-sm badge-primary">{{brawler.class.name}}</h4>
       <p class="line-clamp-2">{{ brawler.description }}</p>
       <!-- <div class="card-actions justify-end">
         <button class="btn btn-primary">Buy Now</button>

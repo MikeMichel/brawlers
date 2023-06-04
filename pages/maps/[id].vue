@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Maps } from '~~/types'
 import { fetchBrawlers } from '~/api/brawlers'
+import brawlerExtras from '~/static/brawler-extras.json'
 
 const route = useRoute()
 console.log(route.params)

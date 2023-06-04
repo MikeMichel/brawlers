@@ -44,5 +44,14 @@ useHead({
 						class="rounded-lg shadow-lg dark:bg-gray-500">
 				</div>
 			</div>
+			// a div container for video 
+			<div class="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
+				<div class="flex items-center justify-center p-4 md:p-8 lg:p-12">
+					<iframe width="560" height="315" src="https://firebasestorage.googleapis.com/v0/b/brawlstars/o/brawl.mp4" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+
 	</div>
 </section></template>
