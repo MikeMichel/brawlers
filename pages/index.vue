@@ -1,6 +1,4 @@
 <script setup>
-// add the default layout
-// layout: 'default'
 const { data: brawlers } = await useFetch('https://api.brawlapi.com/v1/brawlers');
 // funktioniert
 const search = ref('')
@@ -19,30 +17,6 @@ const rarity_items = [
   'Mythic',
   'Legendary'
 ]
-
-
-// creqte a constant with all possible types
-const type_items = [
-  'All',
-  'Gem Grab',
-  'Brawl Ball',
-  'Showdown',
-  'Bounty',
-  'Heist',
-  'Siege',
-  'Hot Zone',
-  'Knockout',
-  'Power Play',
-  'Big Game',
-  'Robo Rumble',
-  'Boss Fight',
-  'Championship Challenge',
-  'Special Events',
-  'Training Cave',
-  'Map Maker'
-]
-
-
 
 // computed property to filter the brawlers by rarity,name and rarity
 const rarity = ref('All')
@@ -64,17 +38,11 @@ const filteredBrawlers = computed(() => {
 <template>
   <div class="text-center py-10 md:max-w-xl md:mx-auto">
     <h1 class="text-3xl mb-3 mt-2 font-semibold tracking-normal text-gray-800">
-      Brawlers
+      {{ filteredBrawlers.length }} Brawlers
     </h1>
     <h2 class="text-lg mb-8 font-normal text-gray-600 dark:text-gray-400">
       Yay, all brawlers from Brawl Stars!
     </h2>
-  </div>
-
-  <div class="text-center py-10 md:max-w-xl md:mx-auto">
-    <h1 class="text-3xl mb-3 mt-2 font-semibold tracking-normal text-gray-800">
-      {{ filteredBrawlers.length }} Brawlers
-    </h1>
   </div>
 
   <div class="p-4 xl:p-0">

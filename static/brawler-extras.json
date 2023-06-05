@@ -1,24 +1,17 @@
 {
-    "brawler-extras": [
-      {
-        "id": 16000069,
-        "videoLink": "https://example.com/video1"
-      },
-      {
-        "id": 2,
-        "videoLink": "https://example.com/video2"
-      },
-      {
-        "id": 3,
-        "videoLink": "https://example.com/video3"
-      },
-      {
-        "id": 4,
-        "videoLink": "https://example.com/video4"
-      },
-      {
-        "id": 5,
-        "videoLink": "https://example.com/video5"
-      }
-    ]
+  "16000069": {
+    "name": "bla",
+    "videoLink": "https://example.com/video1",
+    "test": 34
+  },
+  "16000070": {
+    "name": "blub",
+    "videoLink": "https://example.com/video2",
+    "test": 34
+  },
+  "16000071": {
+    "name": "bllib",
+    "videoLink": "https://example.com/video3",
+    "test": 34
   }
+}

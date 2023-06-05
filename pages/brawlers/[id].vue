@@ -2,6 +2,25 @@
 import type { Brawler } from '~~/types'
 
 const route = useRoute()
+
+const brawlerid = +route.params.id // das + damit es ein number ist sonst kann ich videoData nicht durchsuchen
+
+const videoData: { [key: string]: { name: string; videoLink: string } } = {
+  "16000000": {
+    name: "bla",
+    videoLink: "https://www.youtube.com/embed/D2aJkoCgpYw"
+  },
+  "16000070": {
+    name: "blub",
+    videoLink: "https://example.com/video2"
+  },
+  "16000071": {
+    name: "bllib",
+    videoLink: "https://example.com/video3"
+  }
+};
+
+
 console.log(route.params)
 const { data: brawler, pending, error } = await useFetch<Brawler>(`https://api.brawlapi.com/v1/brawlers/${route.params.id}`)
 
@@ -44,14 +63,9 @@ useHead({
 						class="rounded-lg shadow-lg dark:bg-gray-500">
 				</div>
 			</div>
-			// a div container for video 
-			<div class="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
-				<div class="flex items-center justify-center p-4 md:p-8 lg:p-12">
-					<iframe width="560" height="315" src="https://firebasestorage.googleapis.com/v0/b/brawlstars/o/brawl.mp4" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-			</div>
+			<div>
+				 <iframe width="560" height="315" :src="videoData[brawlerid]?.videoLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+			</div>
 	</div>
 </section></template>
