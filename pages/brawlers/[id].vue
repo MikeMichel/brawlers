@@ -5,17 +5,14 @@ const route = useRoute()
 
 const brawlerid = +route.params.id // das + damit es ein number ist sonst kann ich videoData nicht durchsuchen
 
-const videoData: { [key: string]: { name: string; videoLink: string } } = {
+const videoData: { [key: string]: { videoLink: string } } = {
   "16000000": {
-    name: "bla",
     videoLink: "https://www.youtube.com/embed/D2aJkoCgpYw"
   },
-  "16000070": {
-    name: "blub",
+  "16000069": {
     videoLink: "https://example.com/video2"
   },
   "16000071": {
-    name: "bllib",
     videoLink: "https://example.com/video3"
   }
 };
@@ -65,7 +62,9 @@ useHead({
 			</div>
 			<div>
 				 <iframe width="560" height="315" :src="videoData[brawlerid]?.videoLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 			</div>
 	</div>
-</section></template>
+</section>
+
+
+</template>
