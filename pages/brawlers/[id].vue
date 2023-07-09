@@ -56,7 +56,7 @@ useHead({
 
 			<div class="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
 				<div class="flex items-center justify-center p-4 md:p-8 lg:p-12">
-					<img :src="brawler.imageUrl" .alt="brawler.name"
+					<img :src="brawler.imageUrl2" .alt="brawler.name"
 						class="rounded-lg shadow-lg dark:bg-gray-500">
 				</div>
 			</div>

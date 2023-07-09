@@ -67,7 +67,7 @@ const filteredBrawlers = computed(() => {
     >
     <div class="card h-min w-full bg-base-100 shadow-xl">
     <!-- <div class="card w-96 bg-base-100 shadow-xl"> -->
-    <figure><img :src="brawler.imageUrl" .alt="brawler.name" /></figure>
+    <figure><img :src="brawler.imageUrl2" .alt="brawler.name" /></figure>
     <div class="card-body">
       <h2 class="card-title">{{ brawler.name }}      </h2>
       <h4 class="badge md:badge-sm badge-secondary">{{brawler.rarity.name}}</h4>
