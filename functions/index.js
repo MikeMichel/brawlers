@@ -5,4 +5,4 @@
 // exports.fetchDataAndSaveToFirestore =
 //   fetchDataAndSaveToFirestore.fetchDataAndSaveToFirestore;
 // https://firebase.google.com/docs/functions/organize-functions?hl=en&gen=2nd
-exports.firestore = require("./firestore.js");
+exports.firestore = require("./firestore.mjs");
