@@ -14,7 +14,8 @@
       ]
     },
     {
-      "source": ".output/server", 
+      "source": ".output/server",
+      "codebase": "server",
       "runtime": "nodejs16"
     }
   ],
