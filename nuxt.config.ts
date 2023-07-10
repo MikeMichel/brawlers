@@ -10,18 +10,18 @@ export default defineNuxtConfig({
       storageBucket: "speedy-valor-379408.appspot.com",
       messagingSenderId: "153460609557",
       appId: "1:153460609557:web:97e2064be13fa69989f41c",
-      measurementId: "G-KVLRV6N9Z1"
+      measurementId: "G-KVLRV6N9Z1",
       // there could be other properties depending on the project
     },
   },
-    css: ['~/assets/css/main.css'],
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+  css: ["~/assets/css/main.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
-    nitro: {
-      preset: 'firebase',
-  }
-})
+  },
+  nitro: {
+    preset: "firebase",
+  },
+});
