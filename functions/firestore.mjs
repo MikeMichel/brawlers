@@ -11,13 +11,14 @@
 // const admin = require("firebase-admin");
 // const axios = require("axios");
 // this is the new way to import modules:
-import * as admin from "firebase-admin";
+// Import only what you need
+import { initializeApp } from "firebase-admin/app";
 import * as functions from "firebase-functions";
 import * as axios from "axios";
 // import * as onRequest from "firebase-functions/v2/https";
 // import * as logger from "firebase-functions/logger";
 
-admin.initializeApp();
+initializeApp();
 
 exports.fetchDataAndSaveToFirestore = functions.https.onRequest(
   async (req, res) => {
