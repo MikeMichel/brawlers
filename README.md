@@ -1,4 +1,6 @@
 components, composables, modules und co. [Verzeichnisstruktur](https://vueschool.io/articles/vuejs-tutorials/understanding-the-directory-structure-in-nuxt-3/)
+Multiple Functions in different folders https://firebase.google.com/docs/functions/organize-functions?hl=de&gen=2nd#managing_multiple_source_packages_monorepo  
+
 
 # Nuxt 3 Minimal Starter
 
