@@ -1,22 +1,24 @@
 {
+  "emulators": {
+    "functions": {
+      "port": "5002"
+    }
+  },
   "functions": [
     {
-      "source": "./functions",
+      "source": "functions",
       "codebase": "default",
       "ignore": [
         "node_modules",
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log"
-      ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     },
     {
       "source": ".output/server",
       "codebase": "server",
-      "runtime": "nodejs16"
+      "runtime": "nodejs18"
     }
   ],
   "firestore": {
@@ -28,16 +30,12 @@
     "public": ".output/public",
     "cleanUrls": true,
     "rewrites": [
-      { 
-        "source": "**", 
-        "function": "server" 
+      {
+        "source": "**",
+        "function": "server"
       }
     ],
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "ui": {
     "enabled": false
