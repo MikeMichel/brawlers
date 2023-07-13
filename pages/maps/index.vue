@@ -1,4 +1,5 @@
 <script setup>
+import gsap from "gsap";
 // add the default layout
 // layout: 'default'
 const { data: maps } = await useFetch('https://api.brawlapi.com/v1/maps');
@@ -45,12 +46,23 @@ const filteredMaps = computed(() => {
   console.log('filtered: ', filtered)
   return filtered
 })
+
+// create a constant which watches and takes the length of the filtered brawlers and animate it with gsap
+const animatedValue = ref(filteredMaps.value.length); // filteredBrawlers.value.length is the initial value
+watch(filteredMaps, () => {
+  gsap.to(animatedValue, {
+    duration: 1,
+    value: filteredMaps.value.length,
+    // no decimals
+    roundProps: "value",
+  });
+});
 </script>
 
 <template>
   <div class="text-center py-10 md:max-w-xl md:mx-auto">
     <h1 class="text-3xl mb-3 mt-2 font-semibold tracking-normal text-gray-800">
-      Maps
+      {{ animatedValue}} Maps
     </h1>
     <h2 class="text-lg mb-8 font-normal text-gray-600 dark:text-gray-400">
       Yay, all maps from Brawl Stars!
